@@ -1,1 +1,1 @@
-from .eqopen import eq_backtests
+from .eqopen import eqbacktests
