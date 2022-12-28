@@ -1,4 +1,4 @@
-import google.colab, gspread, google.auth, os
+import google.colab, gspread, google.auth, os, IPython.display
 
 def eq_backtests(eq_credentials_path: str) -> None:
     # Read EQCredentials
@@ -11,3 +11,8 @@ def eq_backtests(eq_credentials_path: str) -> None:
     
     # Install Library
     os.system(f"pip install git+https://{eq_credentials['GitHub_Username']}:{eq_credentials['GitHub_Token']}@github.com/exp-Quant/EQBacktests@v20")
+
+    # Clean pip install output
+    IPython.display.clear_output()
+
+    return eq_credentials
