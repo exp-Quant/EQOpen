@@ -10,7 +10,7 @@ def eqbacktests(eq_credentials_path: str = 'EQCredentials', *argc, **argv) -> 'E
     }
     
     # Install Library
-    subprocess.check_call(['pip', 'install', f"git+https://{eq_credentials['GitHub_Username']}:{eq_credentials['GitHub_Token']}@github.com/exp-Quant/EQBacktests@v20"], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+    subprocess.check_call(['pip', 'install', f"git+https://{eq_credentials['GitHub_Username']}:{eq_credentials['GitHub_Token']}@github.com/exp-Quant/EQBacktests"], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
 
     # Import and return library
     import eqbacktests
